@@ -92,7 +92,7 @@ function Home({ addCompare }) {
         narxiD,
         m1,
         m2,
-        mailA,  
+        mailA,
         yearInput,
         sumInput,
         saralangan,
@@ -272,7 +272,7 @@ function Home({ addCompare }) {
                     <div className="cards__row">
                         <Row style={{ width: "100%" }}>
                             {cars.length > 0 &&
-                                cars?.map((car, index) => {
+                                cars?.filter(p =>p?.aksiya !=="Aksiya")?.map((car, index) => {
                                     if (index < 6 && car?.status) {
                                         return (
                                             <Col xxl={6} xl={8} l={8} md={12} sm={24}>
