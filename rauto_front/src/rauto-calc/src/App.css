@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li,
+p,
+a,
+span {
+  font-weight: bold;
+}
+
+p {
+  padding: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+.tabs-title {
+  margin-bottom: 30px;
+}
+a{
+  text-decoration: none!important;
+}
+
+.form-wrapper {
+  margin: 20px 0;
+}
+
+#credit-infos {
+  padding: 15px 0 15px 25px;
+}
+
+.form-range {
+  width: 100%;
+}
+
+.range-credit > output {
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.form-select {
+  max-width: 160px;
+  width: 100%;
+}
+
+.calc-buttons {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.calc-buttons .btn-warning {
+  margin-right: 7px!important;
+}
+
+.radio-check > input {
+  width: 16px;
+  height: 16px;
+}
+
+.radio-check > p {
+  font-weight: bold;
+}
+
+.output-price {
+  margin: 0 30px 0 20px;
+}
+
+.more {
+  display: block;
+  margin: 20px 0 0 20px;
+}
+
+:root {
+  --background-gradient: linear-gradient(30deg, #bdc5c2 30%, #bfd0d3);
+  --gray: #5e5505;
+  --darkgray: #fcdd32;
+}
+
+select {
+  /* Reset Select */
+  appearance: none !important;
+  outline: 0!important;
+  border: 0!important;
+  box-shadow: none!important;
+  /* Personalize */
+  font-weight: bold!important;
+  flex: 1!important;
+  padding: 0 1em!important;
+  color: #2c3e50!important;
+  background-color: var(--darkgray) !important;
+  background-image: none!important;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none!important;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  max-width: 175px;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #5e5316;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+.selectBank label{
+  margin-right: 10px;
+}
+
+/* Other styles*/
+body {
+  background: var(--background-gradient);
+}
+h1 {
+  margin: 0 0 0.25em;
+}
+
+.btns-style {
+    margin: 0 5px;
+}
+
+
+label {
+  cursor: pointer;
+}
+
+/* Header-styles */
+
+
+
+.card-img-top {
+  max-width: 300px;
+  width: 100%;
+  height: 100px;
+}
+
+/* Table-credit-info */
+
+.table-credit-info {
+  font-weight: 500;
+}
+
+.sub-table-btn {
+  margin: 25px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print-btn {
+  margin-left: 20px;
+}
+
+/* Accordion */
+
+
+.myaccordion .card:last-child .card-header {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.card {
+  background: #d4f4fa !important;
+}
+
+.myaccordion .card-header {
+  border-bottom-color: #f8f8f8;
+  background: transparent;
+}
+
+.myaccordion .fa-stack {
+  font-size: 18px;
+}
+.myaccordion .btn1 {
+  background: #bdc5c2 !important;
+  width: 100%;
+  font-weight: bold;
+  color: #1f2e3d!important;
+  padding: 0;
+  border-color: #bdc5c2 !important;
+  outline: none;
+
+}
+.myaccordion .btn1:focus{
+  box-shadow: none !important;
+}
+
+.myaccordion li + li {
+  margin-top: 10px;
+}
+
+.myaccordion .th-width {
+  width: 300px;
+}
+/* footer button */
+.footer-top__left .btn-warning{
+  background: #efb801 linear-gradient(to top, #efb801, #fec60c);
+  text-shadow: 0 1px 3px rgb(0 0  35);
+  border: 0;
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  border-radius: 0.125rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer-top__left .btn {
+  display: inline-block;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0.75rem 1.75rem;
+}
+.footer-top__left .btn:hover{
+  color: #fff;
+}
+.btn{
+  border-radius: 0!important;
+}
