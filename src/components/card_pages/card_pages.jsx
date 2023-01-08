@@ -99,7 +99,7 @@ function AdminCards() {
                         </div>
                         <div
                             className="btn btn-danger btn-sm float-right mr15"
-                            onClick={() => logout()}
+                            onClick={() => navigate("/")}
                         >
                             {home[lang]}
                         </div>

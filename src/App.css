@@ -3403,3 +3403,19 @@ ul.show {
         margin: 0 0;
     }
 }
+.textarean{
+    width: 70%;
+}
+.gap30{
+    display: flex;
+    gap: 40px;
+}
+@media(max-width:575px){
+.gap30{
+    flex-direction: column;
+    gap:10px;
+}
+.textarean{
+    width: 100%;
+}
+}

@@ -10,6 +10,7 @@ import {convertToRaw, EditorState} from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import {useMediaQuery} from "react-responsive";
 import {toast} from "react-toastify";
+    import { Input } from 'antd';
 
 function AddCardForm() {
     const {id} = useParams()
@@ -17,12 +18,9 @@ function AddCardForm() {
     const dispatch = useDispatch()
     const {handleSubmit, register, setValue, reset} = useForm()
     const [data, setData] = useState(fields)
-    const [editorState1, setEditorState1] = useState(() =>
-        EditorState.createEmpty()
-    );
-    const [editorState2, setEditorState2] = useState(() =>
-        EditorState.createEmpty()
-    );
+
+    const { TextArea } = Input;
+
     const [file, setFile] = useState([])
     const [op1, setOp1] = useState("")
     const [op2, setOp2] = useState("")
@@ -79,18 +77,6 @@ function AddCardForm() {
             toast.success(success[lang])
         }
     }
-
-    const onEditorStateChange1 = (editorState) => {
-        setEditorState1(editorState)
-        draftToHtml(convertToRaw(editorState.getCurrentContent())).toString();
-        setOp1(draftToHtml(convertToRaw(editorState.getCurrentContent())).toString())
-    }
-    const onEditorStateChange2 = (editorState) => {
-        setEditorState2(editorState)
-        draftToHtml(convertToRaw(editorState.getCurrentContent())).toString();
-        setOp2(draftToHtml(convertToRaw(editorState.getCurrentContent())).toString())
-    }
-
 
     useEffect(() => {
         if (!!localStorage.getItem("admin_token"))
@@ -191,82 +177,24 @@ function AddCardForm() {
                                             }
                                         )}
                                     <div className='pageBody' >
-                                        <label className='col-sm-2 col-form-label'>
+                                        <div className='gap30' >
+                                        <label>
                                             {opisaniya[lang]}
                                         </label>
-                                        <Editor
-                                            value={op1}
-                                            editorState={editorState1}
-                                            toolbarClassName="toolbarClassName"
-                                            wrapperClassName="wrapperClassName"
-                                            editorClassName="editorClassName"
-                                            onEditorStateChange={onEditorStateChange1}
-                                            toolbar={{
-                                                options: [
-                                                    "inline",
-                                                    "blockType",
-                                                    "fontSize",
-                                                    "fontFamily",
-                                                    "list",
-                                                    "textAlign",
-                                                    "colorPicker",
-                                                    "link",
-                                                    "embedded",
-                                                    "emoji",
-                                                    "image",
-                                                    "remove",
-                                                    "history",
-                                                ],
-                                                colorPicker: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                                link: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                                image: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                            }}
-                                        />
+                                        <div  className='textarean'>
+                                        <TextArea rows={4} onChange={e=>setOp1(e.target.value)}/>
+                                        </div>
+                                        </div>
                                     </div>
                                     <div className='pageBody m-t-40'>
-                                        <label className='col-sm-2 col-form-label'>
-                                            {opisaniyaru[lang]}
+                                        <div className='gap30' >
+                                        <label>
+                                        {opisaniyaru[lang]}
                                         </label>
-                                        <Editor
-                                            value={op2}
-                                            editorState={editorState2}
-                                            toolbarClassName="toolbarClassName"
-                                            wrapperClassName="wrapperClassName"
-                                            editorClassName="editorClassName"
-                                            onEditorStateChange={onEditorStateChange2}
-                                            toolbar={{
-                                                options: [
-                                                    "inline",
-                                                    "blockType",
-                                                    "fontSize",
-                                                    "fontFamily",
-                                                    "list",
-                                                    "textAlign",
-                                                    "colorPicker",
-                                                    "link",
-                                                    "embedded",
-                                                    "emoji",
-                                                    "image",
-                                                    "remove",
-                                                    "history",
-                                                ],
-                                                colorPicker: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                                link: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                                image: {
-                                                    popupClassName: "colorModal",
-                                                },
-                                            }}
-                                        />
+                                        <div  className='textarean'>
+                                        <TextArea rows={4} onChange={e=>setOp2(e.target.value)}/>
+                                        </div>
+                                        </div>
                                     </div>
                                     <div className='m-5'>
                                         <div className='download'>

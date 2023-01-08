@@ -7,16 +7,12 @@ import {MainApi} from "../../api";
 import {toast} from "react-toastify";
 import {useParams} from "react-router";
 import {fields} from "../../components/add_card_form/fields";
-import {Editor} from "react-draft-wysiwyg";
-import {ContentState, convertToRaw, EditorState} from "draft-js";
-import htmlToDraft from "html-to-draftjs";
-import draftToHtml from "draftjs-to-html";
 import {useSelector} from "react-redux";
 import {Language} from "../../lang/Languages";
 
 function UpdateCar() {
     const {id} = useParams()
-
+    const { TextArea } = Input;
     const [form] = Form.useForm()
     const {Option} = Select
     const [op1, setOp1] = useState("")
@@ -65,13 +61,8 @@ function UpdateCar() {
         Object.keys(values).forEach(
             key =>
                 key !== 'photo' &&
-                key !== 'opisaniya' &&
-                key !== 'opisaniyaru' &&
                 formData.append(key, values[key])
         )
-
-        formData.append("opisaniya", op1)
-        formData.append("opisaniyaru", op2)
         if (!!imgs1.length)
             imgs1.forEach(file => formData.append('photo', file))
         axios.put(`${MainApi}/car/${id}`, formData).then(res => {
@@ -85,43 +76,11 @@ function UpdateCar() {
 
     const field = fields.find(i => i.key === "madel")
 
-    const [editorState1, setEditorState1] = useState();
-    const [editorState2, setEditorState2] = useState();
-
-    const onEditorStateChange1 = (editorState) => {
-        setEditorState1(editorState)
-        setOp1(draftToHtml(convertToRaw(editorState.getCurrentContent())).toString())
-    }
-
-    const onEditorStateChange2 = (editorState) => {
-        setEditorState2(editorState)
-        setOp2(draftToHtml(convertToRaw(editorState.getCurrentContent())).toString())
-    }
-
     const handleNavigate = (e) => {
         setImgs1(Object.values(e.target.files))
     }
 
     useEffect(() => {
-        if (data?.opisaniya) {
-            const {contentBlocks, entityMap} = htmlToDraft(data?.opisaniya);
-            const contentState = ContentState.createFromBlockArray(
-                contentBlocks,
-                entityMap
-            );
-            setEditorState1(EditorState.createWithContent(contentState))
-            setOp1(data?.opisaniya)
-        }
-        if (data?.opisaniyaru) {
-            const {contentBlocks, entityMap} = htmlToDraft(data?.opisaniyaru);
-            const contentState = ContentState.createFromBlockArray(
-                contentBlocks,
-                entityMap
-            );
-            setEditorState2(EditorState.createWithContent(contentState))
-            setOp2(data?.opisaniyaru)
-        }
-
         setImgs(data?.photo)
     }, [data])
 
@@ -573,40 +532,7 @@ function UpdateCar() {
                             },
                         ]}
                     >
-                        <Editor
-                            editorState={editorState1}
-                            value={data?.opisaniya}
-                            toolbarClassName="toolbarClassName"
-                            wrapperClassName="wrapperClassName"
-                            editorClassName="editorClassName"
-                            onEditorStateChange={onEditorStateChange1}
-                            toolbar={{
-                                options: [
-                                    "inline",
-                                    "blockType",
-                                    "fontSize",
-                                    "fontFamily",
-                                    "list",
-                                    "textAlign",
-                                    "colorPicker",
-                                    "link",
-                                    "embedded",
-                                    "emoji",
-                                    "image",
-                                    "remove",
-                                    "history",
-                                ],
-                                colorPicker: {
-                                    popupClassName: "colorModal",
-                                },
-                                link: {
-                                    popupClassName: "colorModal",
-                                },
-                                image: {
-                                    popupClassName: "colorModal",
-                                },
-                            }}
-                        />
+                    <TextArea rows={4}/>
                     </Form.Item>
                     <div className=" m-b-20">
                         <Form.Item
@@ -619,40 +545,7 @@ function UpdateCar() {
                                 },
                             ]}
                         >
-                            <Editor
-                                editorState={editorState2}
-                                value={data?.opisaniyaru}
-                                toolbarClassName="toolbarClassName"
-                                wrapperClassName="wrapperClassName"
-                                editorClassName="editorClassName"
-                                onEditorStateChange={onEditorStateChange2}
-                                toolbar={{
-                                    options: [
-                                        "inline",
-                                        "blockType",
-                                        "fontSize",
-                                        "fontFamily",
-                                        "list",
-                                        "textAlign",
-                                        "colorPicker",
-                                        "link",
-                                        "embedded",
-                                        "emoji",
-                                        "image",
-                                        "remove",
-                                        "history",
-                                    ],
-                                    colorPicker: {
-                                        popupClassName: "colorModal",
-                                    },
-                                    link: {
-                                        popupClassName: "colorModal",
-                                    },
-                                    image: {
-                                        popupClassName: "colorModal",
-                                    },
-                                }}
-                            />
+                           <TextArea rows={4}/>
                         </Form.Item>
                     </div>
 
