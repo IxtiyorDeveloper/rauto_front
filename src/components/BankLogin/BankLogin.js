@@ -22,7 +22,7 @@ function BankLogin() {
         });
     };
 
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('bank_token')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -48,7 +48,7 @@ function BankLogin() {
     }
 
     useEffect(() => {
-        if (!!token) navigate('/admin/cards')
+        if (!!token) navigate('/admin/applications')
     }, [token])
 
     const {lang} = useSelector((state) => state.lang);

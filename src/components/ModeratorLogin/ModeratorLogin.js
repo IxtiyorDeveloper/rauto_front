@@ -15,7 +15,7 @@ function ModeratorLogin() {
     let navigate = useNavigate()
 
 
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('moderator_token')
 
     const handleSubmit = (e) => {
         e.preventDefault()

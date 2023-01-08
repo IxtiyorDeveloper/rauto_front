@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import SignOptions from "../sign-options/sign-options";
 import UserLogin from "../../pages/user_login/user_login";
 import Register from "../../pages/register";
+import { useNavigate } from 'react-router';
 
 function AdminPage(props) {
     const [step, setStep] = useState("enter")
+    const navigate = useNavigate()
 
     let Content = () =>
         ({
@@ -13,7 +15,11 @@ function AdminPage(props) {
             login: <UserLogin/>,
             phone:""
         }[step])
-
+useEffect(() => {
+    if(localStorage.getItem("user_token")){
+        navigate("/admin/cards")
+    }
+},[localStorage.getItem("user_token")])
     return (
         <div>
             <Content/>

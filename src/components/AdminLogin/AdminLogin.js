@@ -17,7 +17,7 @@ function AdminLogin() {
     let navigate = useNavigate()
 
 
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem('admin_token')
 
     const handleSubmit = (e) => {
         e.preventDefault()
