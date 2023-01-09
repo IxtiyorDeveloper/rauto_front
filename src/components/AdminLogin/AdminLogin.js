@@ -4,11 +4,13 @@ import axios from "../../api";
 import {useSelector} from "react-redux";
 import {Language} from "../../lang/Languages";
 
+import salom from "../../images/topLog.png"
+
 function AdminLogin() {
     const email = useRef()
     const password = useRef()
     const {lang} = useSelector(state => state.lang)
-    const {l,pass,mail} = Language;
+    const { k, pass, mail, welcome } = Language;
     const [values, setValues] = useState({
         email: "",
         password: "",
@@ -57,16 +59,14 @@ function AdminLogin() {
                 </a>
             </div>
             <div className='wrapper-page'>
-                <div className='card card-pages shadow-none'>
+                <div className='card-pages'>
                     <div className='card-avto-body'>
                         <div className='text-center m-t-0 m-b-15'>
-                            <a href='' className='logo logo-admin'>
-                                <h1>RAUTO</h1>
-                            </a>
+                            <img className='hello-img' src={salom} alt="hello" />
                         </div>
-                        <h5 className='font-18 text-center'></h5>
+                        <h3 className='welcome-text text-center'>{welcome[lang]}</h3>
                         <form
-                            className='form-horizontal m-t-30 el_form'
+                            className='form-horizontal form_login m-t-30 el_form'
                             onSubmit={e => handleSubmit(e)}
                         >
                             <div className='form-group'>
@@ -97,7 +97,7 @@ function AdminLogin() {
                                         type='password'
                                         required
                                         name='password'
-                                        placeholder='Password'
+                                        placeholder={pass[lang]}
                                         value={values?.password}
                                         onChange={event => setValues({
                                             ...values,
@@ -113,7 +113,7 @@ function AdminLogin() {
                                         className='btn btn-primary btn-block btn-lg waves-effect waves-light'
                                         type='submit'
                                     >
-                                        {l[lang]}
+                                        {k[lang]}
                                     </button>
                                 </div>
                             </div>

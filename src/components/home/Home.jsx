@@ -196,9 +196,9 @@ function Home({ addCompare }) {
                             <div className="slider__body-descr">
                                 <span>{second[lang]}</span>
                                 <span>
-                                    <Link to="/komissia"> {sotishMain[lang]} </Link>
+                                    <Link to="/user"> {sotishMain[lang]} </Link>
                                     {yoki[lang]}
-                                    <Link to="/vikupAvto"> {olishMain[lang]} </Link>
+                                    <Link to="/cars"> {olishMain[lang]} </Link>
                                 </span>
                                 <span>
                                     {fourth[lang]}
