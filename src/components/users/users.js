@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import {Button, Table} from "antd";
+import {Button, Table} from "antd/";
 import {useSelector} from "react-redux";
 import {Language} from "../../lang/Languages";
 
@@ -86,7 +86,7 @@ function Users({dataSource, isbank = false, deleteBank, updateBank}) {
             } : {},
 
         ]
-    },[lang]);
+    },);
 
     return (
         <div>

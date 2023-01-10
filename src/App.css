@@ -968,7 +968,7 @@ dt {
 /******* Topbar *******/
 
 .topbar .topbar-left {
-  background-color: midnightblue;
+  background-color: #4d70f1;
   float: left;
   text-align: center;
   height: 70px;
@@ -1108,7 +1108,8 @@ dt {
 
 #sidebar-menu > ul > li > a i {
   line-height: 1;
-  width: 20px;
+  width: 33px;
+  height: 33px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -2680,9 +2681,6 @@ table.focus-on tbody tr.focused td {
   margin-top: 45px;
 }
 
-.w100 {
-}
-
 .files a {
   text-decoration: none;
   list-style-type: none;
@@ -3049,10 +3047,6 @@ ul.show {
   color: #fff !important;
   background-color: #5a6268 !important;
   border-color: #545b62 !important;
-}
-
-.restrict-card {
-  /*height: 175px;*/
 }
 
 .invisible {

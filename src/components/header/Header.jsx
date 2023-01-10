@@ -63,22 +63,14 @@ const Header = (props) => {
         ishVaqt1,
         ishVaqt2,
         ishVaqt3,
-        a1,
-        a2,
-        a3,
         a4,
         a5,
         a6,
-        a7,
         BIZNING_MIJOZLAR,
-        a8,
         f4,
         f5,
         f6,
         f7,
-        f10,
-        f11,
-        f12
     } = Language;
 
     function search() {
@@ -359,7 +351,7 @@ const Header = (props) => {
                                         className="menu__link"
                                         onClick={() => setCollapseThreeOpen(!collapseThreeOpen)}
                                     >
-                                        <a>{Kompaniya[lang]}</a>
+                                        <a href="#">{Kompaniya[lang]}</a>
                                         <div className="menu__link-arrow">
                                             <img
                                                 src={arrow_i}

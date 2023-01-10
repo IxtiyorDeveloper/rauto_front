@@ -18,7 +18,7 @@ function Statistics() {
     const [ord, setOrd] = useState(0)
 
     const {lang} = useSelector(state => state.lang)
-    const {users, cars, clients, apps, banks, orders_all} = Language
+    const {users, cars, clients, apps, banks, orders_all, statistikasi} = Language
 
     useEffect(() => {
         axios.get(`${MainApi}/user/all`)
@@ -69,7 +69,7 @@ function Statistics() {
         <>
             <div className="row pt-3 statistics_wrapper">
                 <LogoutComponent/>
-                <h3>Saytdagi kontentlar statistikasi</h3>
+                <h3>{statistikasi[lang]}</h3>
                 <div className="col-sm-6 col-xl-3">
                     <div className="card  bg-primary_all">
                         <div className="card-heading p-4">

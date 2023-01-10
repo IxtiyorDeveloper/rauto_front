@@ -58,7 +58,6 @@ function Home({ addCompare }) {
         seven,
         eight,
         nine,
-        ten,
         eleven,
         twelve,
         thirdteen,

@@ -325,7 +325,7 @@ export const fields = [
         label: status,
         select: [
             { value: 'Yangi', name: 'Yangi' },
-            { value: 'Eski', name: 'Eski' },
+            { value: 'Foydalanilgan', name: 'Foydalanilgan' },
         ],
     },
 ]

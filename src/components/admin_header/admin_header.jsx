@@ -1,12 +1,14 @@
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {Language} from "../../lang/Languages";
-import newsIcon from "../../images/newspaper-solid.png";
+import newsIcon from "../../images/taxi.png";
 import announcementIcon from "../../images/rating.png";
 import chartIcon from "../../images/statistics.png";
 import order from "../../images/order.png";
-import moderat from "../../assets/icons/moderator.png";
-import bankUser from "../../assets/icons/bank.png";
+import moderator from "../../images/mediator.png";
+import bankPerson from "../../images/personalBank.png";
+import users from "../../images/users.png";
+import dataBase from "../../images/database.png";
 import "./admin_header.css";
 import React, {useEffect, useState} from "react";
 
@@ -37,7 +39,7 @@ function AdminHeader() {
                 <div className="topbar-left">
                     <Link to="/admin/orders" className="logo">
             <span className="logo-light">
-              <h1>RAUTO</h1>
+              <h2>RAUTO</h2>
             </span>
                         <span className="logo-sm">
               <i className="fa-solid fa-newspaper"></i>
@@ -54,8 +56,8 @@ function AdminHeader() {
                                 (type === "admin") &&
                                 <li>
                                     <Link to="/admin/orders" className="waves-effect">
-                                        <i className="mdi  mdi-message-text-outline text-white bg-warning">
-                                            <img src={order} alt="" width={20}/>
+                                            <i className="mdi  mdi-message-text-outline text-white bg-warning">
+                                            <img src={order} alt="icon-menu" width={27}/>
                                         </i>
                                         <span>{orders[lang]}</span>
                                     </Link>
@@ -66,7 +68,7 @@ function AdminHeader() {
                                 <li>
                                     <Link to="/admin/cards" className="waves-effect">
                                         <i className="mdi  mdi-message-text-outline text-white bg-warning">
-                                            <img src={newsIcon} alt="" width={20}/>
+                                            <img src={newsIcon} alt="icon-menu" width={27}/>
                                         </i>
                                         <span>{add_car[lang]}</span>
                                     </Link>
@@ -77,31 +79,9 @@ function AdminHeader() {
                                 <li>
                                     <Link to="/moderators" className="waves-effect">
                                         <i className="mdi  mdi-message-text-outline text-white bg-warning">
-                                            <img src={newsIcon} alt="" width={20}/>
+                                                <img src={moderator} alt="" width={27}/>
                                         </i>
                                         <span>{moderators[lang]}</span>
-                                    </Link>
-                                </li>
-                            }
-                            {
-                                (type === "admin") &&
-                                <li>
-                                    <Link to="/admin/clients" className="waves-effect">
-                                        <i className="mdi  mdi-message-text-outline text-white bg-warning">
-                                            <img src={announcementIcon} alt="" width={20}/>
-                                        </i>
-                                        <span>{clients[lang]}</span>
-                                    </Link>
-                                </li>
-                            }
-                            {
-                                (type === "admin") &&
-                                <li>
-                                    <Link to="/admin/statistic/all" className="waves-effect">
-                                        <i className="mdi mdi-trending-up bg-warning text-white">
-                                            <img src={chartIcon} alt="" width={20}/>
-                                        </i>
-                                        <span>{statistics[lang]}</span>
                                     </Link>
                                 </li>
                             }
@@ -114,10 +94,21 @@ function AdminHeader() {
                                     >
                                         <div>
                                             <i className="mdi mdi-trending-up bg-warning text-white">
-                                                <img src="/favicons/applications.svg" alt="" width={20}/>
+                                                <img src="/favicons/applications.svg" alt="icon-menu" width={27} />
                                             </i>
                                             <span> {applications[lang]}</span>
                                         </div>
+                                    </Link>
+                                </li>
+                            }
+                            {
+                                (type === "admin") &&
+                                <li>
+                                    <Link to="/admin/clients" className="waves-effect">
+                                        <i className="mdi  mdi-message-text-outline text-white bg-warning">
+                                            <img src={announcementIcon} alt="icon-menu" width={27}/>
+                                        </i>
+                                        <span>{clients[lang]}</span>
                                     </Link>
                                 </li>
                             }
@@ -130,7 +121,7 @@ function AdminHeader() {
                                     >
                                         <div>
                                             <i className="mdi mdi-trending-up bg-warning text-white">
-                                                <img src={moderat} alt="" width={20}/>
+                                                    <img src={bankPerson} alt="icon-menu" width={27}/>
                                             </i>
                                             <span>{bank[lang]}</span>
                                         </div>
@@ -146,7 +137,7 @@ function AdminHeader() {
                                     >
                                         <div>
                                             <i className="mdi mdi-trending-up bg-warning text-white">
-                                                <img src={bankUser} alt="" width={20}/>
+                                                    <img src={users} alt="icon-menu" width={27}/>
                                             </i>
                                             <span>{user[lang]}</span>
                                         </div>
@@ -162,10 +153,21 @@ function AdminHeader() {
                                     >
                                         <div>
                                             <i className="mdi mdi-trending-up bg-warning text-white">
-                                                <img src={bankUser} alt="" width={20}/>
+                                                <img src={dataBase} alt="icon-menu" width={27}/>
                                             </i>
                                             <span>{info[lang]}</span>
                                         </div>
+                                    </Link>
+                                </li>
+                            }
+                            {
+                                (type === "admin") &&
+                                <li>
+                                    <Link to="/admin/statistic/all" className="waves-effect">
+                                        <i className="mdi mdi-trending-up bg-warning text-white">
+                                            <img src={chartIcon} alt="icon-menu" width={27}/>
+                                        </i>
+                                        <span>{statistics[lang]}</span>
                                     </Link>
                                 </li>
                             }

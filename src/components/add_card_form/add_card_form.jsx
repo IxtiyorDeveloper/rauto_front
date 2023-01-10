@@ -5,9 +5,9 @@ import {useForm} from 'react-hook-form'
 import {addCar, editCar, getCar} from '../../store/car/car'
 import {Language} from './../../lang/Languages'
 import {fields} from './fields'
-import {Editor} from "react-draft-wysiwyg";
-import {convertToRaw, EditorState} from "draft-js";
-import draftToHtml from "draftjs-to-html";
+// import {Editor} from "react-draft-wysiwyg";
+// import {convertToRaw, EditorState} from "draft-js";
+// import draftToHtml from "draftjs-to-html";
 import {useMediaQuery} from "react-responsive";
 import {toast} from "react-toastify";
     import { Input } from 'antd';
@@ -34,7 +34,7 @@ function AddCardForm() {
     const {lang} = useSelector((state) => state.lang);
 
 
-    const {car, code} = useSelector(state => state.car)
+    const {car} = useSelector(state => state.car)
 
     useEffect(() => {
         if (!!car) Object.keys(car).forEach(key => setValue(key, car[key]))

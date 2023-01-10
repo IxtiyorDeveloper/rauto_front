@@ -70,7 +70,7 @@ function App() {
     const [isOpen, setIsOpen] = useState(false);
 
     const {lang} = useSelector((state) => state.lang);
-    const {vikfourteen, m1, m2} = Language;
+    const {vikfourteen, m1, m2, yuborish, cancel} = Language;
 
     const addCompare = (car) => {
         if (!!!compare.find((item) => item._id === car._id)) {
@@ -188,13 +188,13 @@ function App() {
                         </div>
                     </div>
                     <div style={{display: "flex"}}>
-                        <Button onClick={() => setIsOpen(!isOpen)}>Cancel</Button>
+                        <Button onClick={() => setIsOpen(!isOpen)}>{cancel[lang]}</Button>
                         <Button
                             key="submit"
                             htmlType="submit"
                             style={{marginLeft: "auto"}}
                         >
-                            Submit
+                            {yuborish[lang]}
                         </Button>
                     </div>
                 </form>

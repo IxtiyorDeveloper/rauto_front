@@ -348,7 +348,7 @@ export const Language = {
         "-	Сейчас все люди ценят свое время и многие предпочитают услугу TRADE-IN / ОБМЕН – это быстрый и удобный вариант взаимозачета.",
     ],
     t4: [
-        "-	Siz bizga eski mashinada (ishlab chiqarilganiga 7 yildan ko’p bo’lmagan) kelasiz va yangi mashinani minib ketasiz!",
+        "-	Siz bizga haydalgan mashinada (ishlab chiqarilganiga 7 yildan ko’p bo’lmagan) kelasiz va yangi mashinani minib ketasiz!",
         "-	Вы приезжаете к нам на старом автомобиле (не вқўе 7 лет со дня производство), а едете на новом!",
     ],
     t5: [
@@ -499,8 +499,10 @@ export const Language = {
     ],
 
     yuborish: ["Yuborish", "Отправить"],
-    kredit: ["Kreditga ariza", "Кредит"],
+    cancel: ["Bekor qilish", "Отменить"],
+    kredit: ["Kreditga ariza", "Заявка на кредит"],
 
+    statistikasi: ["Sayt statistikasi", "Статистика сайта"],
     // credit auto
     sername: ["Familiya", "Фамилия"],
     req_surname: ["Familiyani to'ldiring", "Заполните фамилию"],
@@ -710,9 +712,9 @@ export const Language = {
     moderators: ["Moderatorlar", "Модераторы"],
     clients: ["Bizning mijozlar", "Наши клиенты"],
     statistics: ["Statistika", "Статистика"],
-    bank: ["Bank xodimi", "работник банка"],
-    user: ["Barcha foydalanuvchilar", "Все пользователи"],
-    info: ["Ma'lumotlar", "Информация"],
+    bank: [" Bank xodimi", " Работник банка"],
+    user: [" Barcha foydalanuvchilar", " Все пользователи"],
+    info: [" Ma'lumotlar bazasi", " База данных"],
     search: ["Qidirish", "Поиск"],
     home: ["Asosiy sahifaga o'tish", "Перейти на главную страницу"],
     create: ["Yaratish", "Создать"],
@@ -792,6 +794,6 @@ export const Language = {
     ke: ["Kredit emas", "Не кредит"],
     cod: ["SMS kodni kiriting", "Введите СМС код"],
     ag: ["Qaytadan yuborish", "Отправить еще раз"],
-    didnt: ["SMS ni olmadingizmi?", "Вы не получили смс?"],
-    lgt: ["Chiqish", "Выйти?"],
+    didnt: ["SMS ni olmadingizmi?", "Вы не получили СМС?"],
+    lgt: ["Chiqish", "Выйти"],
 };
