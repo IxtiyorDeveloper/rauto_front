@@ -2491,7 +2491,7 @@ table.focus-on tbody tr.focused td {
 }
 
 .form-group label{
-  color: #fff !important;
+  color: #003597 !important;
 }
 
 .card-pages {
@@ -2500,6 +2500,11 @@ table.focus-on tbody tr.focused td {
   box-shadow: 3px 7px 57px -16px rgba(72, 43, 255, 0.84);
   -webkit-box-shadow: 3px 7px 57px -16px rgba(72, 43, 255, 0.84);
   -moz-box-shadow: 3px 7px 57px -16px rgba(72, 43, 255, 0.84);
+}
+
+.me-2 {
+  outline: none;
+  border: none;
 }
 
 .hello-img {

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 // import { useParams } from 'react-router-dom'
 // import { Editor } from '@tinymce/tinymce-react';
 
@@ -98,11 +98,13 @@ function EditCardForm() {
                                                         <option value="31">Malibu-1 3-позиция</option>
                                                     </optgroup>
                                                     <optgroup label="Malibu-2">
+                                                        <option value="32">Malibu-2 1.5L</option>
                                                         <option value="32">Malibu-2 2.0L LTZ</option>
                                                         <option value="33">Malibu-2 2-позиция</option>
                                                         <option value="34">Malibu-2 3-позиция</option>
                                                     </optgroup>
                                                     <optgroup label="Tracker-2">
+                                                        <option value="35">Tracker-1</option>
                                                         <option value="35">Tracker-2 1.0T LT AT FWD</option>
                                                         <option value="36">Tracker-2 LT AT Redline 1.0L</option>
                                                     </optgroup>

@@ -23,16 +23,16 @@ import 'swiper/css/pagination'
 import { Button } from 'antd'
 import { MainApi } from "../../api";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 function More() {
     const { id } = useParams()
     const [data, setData] = useState({ name: '', phone: '' })
     const [car, setCar] = useState(null)
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const { lang } = useSelector(state => state.lang)
 
-    const { mark, m7, m8, m9, m10, m11, m12, m13, m14, m5, m1, m2, m3, m4, kreditcal, kredit, car3 } = Language
+    const { mark, m7, m8, m9, m10, m11, m12, m13, m14, m5, m1, m2, m3, m4, car3 } = Language
 
     function createMarkup() {
         return { __html: lang === '0' ? car.opisaniya : car.opisaniyaru }
@@ -49,13 +49,13 @@ function More() {
             .catch(err => new Error(err))
     }
 
-    const handleNav = () => {
-        window.location.href = "http://rauto-calculator.uz"
-    }
+    // const handleNav = () => {
+    //     window.location.href = "http://rauto-calculator.uz"
+    // }
 
-    const handleNav1 = () => {
-        navigate("/applications/create")
-    }
+    // const handleNav1 = () => {
+    //     navigate("/applications/create")
+    // }
     useEffect(() => {
         axios
             .get(`${MainApi}/car/${id}`)
@@ -225,17 +225,17 @@ function More() {
                             </div>
                         </div>
                         <div className='d-flex justify-content-center mb50'>
-                            <Button className='me-2' onClick={() => createOrder()}>
+                            <Button className='me-2 slider__body-button' onClick={() => createOrder()}>
                                 {m3[lang]}
                             </Button>
                         </div>
                         <div className="abs">
-                            <Button className='me-2' onClick={() => handleNav()}>
+                            {/* <Button className='me-2' onClick={() => handleNav()}>
                                 {kreditcal[lang]}
                             </Button>
                             <Button className='' onClick={() => handleNav1()}>
                                 {kredit[lang]}
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
                     <div className='comment'>

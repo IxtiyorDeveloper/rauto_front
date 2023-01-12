@@ -2329,18 +2329,6 @@ main .social .container {
     text-align: center;
 }
 
-.ant-btn {
-    /*background-color: #045bad !important;*/
-    /*box-shadow: 4px 4px 9px #7fc7d1;*/
-    /*transform-style: preserve-3d;*/
-    /*transition: 2.5s ease-in-out;*/
-    /*transition-delay: 7s;*/
-}
-
-/*.ant-btn:hover{*/
-/*  transform: rotateZ(218deg);*/
-/*}*/
-
 .ant-btn > span {
     font-weight: bold;
 }
@@ -2596,7 +2584,7 @@ main .social .container {
     padding-bottom: 20px;
     padding-right: 2%;
     background-color: #ffff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(83, 83, 83, 0.05) 0px 5px 15px;
     text-align: left;
 }
 

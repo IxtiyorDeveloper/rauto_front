@@ -115,6 +115,7 @@ export const fields = [
             {
                 label: 'Malibu-2',
                 optgroup: [
+                    { value: 'Malibu-2 1.5L', name: 'Malibu-2 1.5L' },
                     { value: 'Malibu-2 2.0L LTZ', name: 'Malibu-2 2.0L LTZ' },
                     { value: 'Malibu-2 2-поз/poz', name: 'Malibu-2 2-поз/poz' },
                     { value: 'Malibu-2 3-поз/poz', name: 'Malibu-2 3-поз/poz' },
@@ -123,6 +124,7 @@ export const fields = [
             {
                 label: 'Tracker-2',
                 optgroup: [
+                    { value: 'Tracker-1', name: 'Tracker-1' },
                     { value: 'Tracker-2 1.0T LT AT FWD', name: 'Tracker-2 1.0T LT AT FWD' },
                     {
                         value: 'Tracker-2 LT AT Redline 1.0L',
@@ -324,8 +326,8 @@ export const fields = [
         key: 'credit',
         label: status,
         select: [
-            { value: 'Yangi', name: 'Yangi' },
-            { value: 'Foydalanilgan', name: 'Foydalanilgan' },
+            { value: '!not found', name: '!not found' },
+            { value: '!not found', name: '!not found' },
         ],
     },
 ]
