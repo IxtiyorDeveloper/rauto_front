@@ -62,34 +62,34 @@ export const fields = [
             {
                 label: 'Nexia-3',
                 optgroup: [
-                    { value: 'Nexia-3 1-позиция', name: 'Nexia-3 1-позиция' },
-                    { value: 'Nexia-3 2-позиция', name: 'Nexia-3 2-позиция' },
-                    { value: 'Nexia-3 3-позиция', name: 'Nexia-3 3-позиция' },
-                    { value: 'Nexia-3 4-позиция', name: 'Nexia-3 4-позиция' },
+                    { value: 'Nexia-3 1-поз/poz', name: 'Nexia-3 1-поз/poz' },
+                    { value: 'Nexia-3 2-поз/poz', name: 'Nexia-3 2-поз/poz' },
+                    { value: 'Nexia-3 3-поз/poz', name: 'Nexia-3 3-поз/poz' },
+                    { value: 'Nexia-3 4-поз/poz', name: 'Nexia-3 4-поз/poz' },
                 ],
             },
             {
                 label: 'Spark',
                 optgroup: [
-                    { value: 'Spark 1-позиция', name: 'Spark 1-позиция' },
-                    { value: 'Spark 1-евро позиция', name: 'Spark 1-евро позиция' },
-                    { value: 'Spark 2-позиция', name: 'Spark 2-позиция' },
-                    { value: 'Spark 2-евро позиция', name: 'Spark 2-евро позиция' },
-                    { value: 'Spark 3-позиция', name: 'Spark 3-позиция' },
-                    { value: 'Spark 3-евро позиция', name: 'Spark 3-евро позиция' },
-                    { value: 'Spark 4-позиция', name: 'Spark 4-позиция' },
-                    { value: 'Spark 4-евро позиция', name: 'Spark 4-евро позиция' },
+                    { value: 'Spark 1-поз/poz', name: 'Spark 1-поз/poz' },
+                    { value: 'Spark 1-евро поз/poz', name: 'Spark 1-евро поз/poz' },
+                    { value: 'Spark 2-поз/poz', name: 'Spark 2-поз/poz' },
+                    { value: 'Spark 2-евро поз/poz', name: 'Spark 2-евро поз/poz' },
+                    { value: 'Spark 3-поз/poz', name: 'Spark 3-поз/poz' },
+                    { value: 'Spark 3-евро поз/poz', name: 'Spark 3-евро поз/poz' },
+                    { value: 'Spark 4-поз/poz', name: 'Spark 4-поз/poz' },
+                    { value: 'Spark 4-евро поз/poz', name: 'Spark 4-евро поз/poz' },
                 ],
             },
             {
                 label: 'Cobalt',
                 optgroup: [
-                    { value: 'Cobalt 1-позиция', name: 'Cobalt 1-позиция' },
-                    { value: 'Cobalt 2-позиция', name: 'Cobalt 2-позиция' },
-                    { value: 'Cobalt 2-евро позиция', name: 'Cobalt 2-евро позиция' },
-                    { value: 'Cobalt 3-позиция', name: 'Cobalt 3-позиция' },
-                    { value: 'Cobalt 4-позиция', name: 'Cobalt 4-позиция' },
-                    { value: 'Cobalt 4-евро позиция', name: 'Cobalt 4-евро позиция' },
+                    { value: 'Cobalt 1-поз/poz', name: 'Cobalt 1-поз/poz' },
+                    { value: 'Cobalt 2-поз/poz', name: 'Cobalt 2-поз/poz' },
+                    { value: 'Cobalt 2-евро поз/poz', name: 'Cobalt 2-евро поз/poz' },
+                    { value: 'Cobalt 3-поз/poz', name: 'Cobalt 3-поз/poz' },
+                    { value: 'Cobalt 4-поз/poz', name: 'Cobalt 4-поз/poz' },
+                    { value: 'Cobalt 4-евро поз/poz', name: 'Cobalt 4-евро поз/poz' },
                 ],
             },
             {
@@ -107,17 +107,17 @@ export const fields = [
             {
                 label: 'Malibu-1',
                 optgroup: [
-                    { value: 'Malibu-1 1-позиция', name: 'Malibu-1 1-позиция' },
-                    { value: 'Malibu-1 2-позиция', name: 'Malibu-1 2-позиция' },
-                    { value: 'Malibu-1 3-позиция', name: 'Malibu-1 3-позиция' },
+                    { value: 'Malibu-1 1-поз/poz', name: 'Malibu-1 1-поз/poz' },
+                    { value: 'Malibu-1 2-поз/poz', name: 'Malibu-1 2-поз/poz' },
+                    { value: 'Malibu-1 3-поз/poz', name: 'Malibu-1 3-поз/poz' },
                 ],
             },
             {
                 label: 'Malibu-2',
                 optgroup: [
                     { value: 'Malibu-2 2.0L LTZ', name: 'Malibu-2 2.0L LTZ' },
-                    { value: 'Malibu-2 2-позиция', name: 'Malibu-2 2-позиция' },
-                    { value: 'Malibu-2 3-позиция', name: 'Malibu-2 3-позиция' },
+                    { value: 'Malibu-2 2-поз/poz', name: 'Malibu-2 2-поз/poz' },
+                    { value: 'Malibu-2 3-поз/poz', name: 'Malibu-2 3-поз/poz' },
                 ],
             },
             {
@@ -247,8 +247,8 @@ export const fields = [
         label: transmission,
         select: [
             { value: '', name: '' },
-            { value: 'mexanika', name: 'Mexanika' },
-            { value: 'avtomat', name: 'Avtomat' },
+            { value: 'Mexanika', name: 'Mexanika' },
+            { value: 'Avtomat', name: 'Avtomat' },
         ],
     },
     {

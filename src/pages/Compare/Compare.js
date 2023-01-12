@@ -1,9 +1,9 @@
-import {useSelector} from "react-redux";
-import {Language} from "../../lang/Languages";
+import { useSelector } from "react-redux";
+import { Language } from "../../lang/Languages";
 
 const Compare = ({ compare, setCompare }) => {
     const { lang } = useSelector(state => state.lang)
-    const {params,del,Narxi,brend,Model,m8,year,dvigatel_hajmi,m11,kuzuv,perevod,yurgan_yoli} = Language;
+    const { params, del, Narxi, brend, Model, m8, year, dvigatel_hajmi, m11, kuzuv, perevod, yurgan_yoli } = Language;
 
     const lists = [
         { text: Narxi[lang], key: 'narxi' },
@@ -32,39 +32,39 @@ const Compare = ({ compare, setCompare }) => {
             <div className="w456">
                 <table className='table table-hover ertw'>
                     <thead>
-                    <tr>
-                        <th>{params[lang]}</th>
-                        {compare.map(car => (
-                            <th className="thw">
-                                <img
-                                    src={car.photo[0]}
-                                    alt='rasm'
-                                    className="cimg"
-                                />
-                            </th>
-                        ))}
-                    </tr>
+                        <tr>
+                            <th>{params[lang]}</th>
+                            {compare.map(car => (
+                                <th className="thw">
+                                    <img
+                                        src={car.photo[0]}
+                                        alt='rasm'
+                                        className="cimg"
+                                    />
+                                </th>
+                            ))}
+                        </tr>
                     </thead>
                     <tbody>
-                    {lists.map(list => (
-                        <tr>
-                            <th>{list.text}</th>
-                            {compare.map(car => (
-                                <td>{car[list.key]}</td>
-                            ))}
-                        </tr>
-                    ))}
-                    <br/>
-                    {compare.length > 0 && (
-                        <tr>
-                            <th></th>
-                            {compare.map(car => (
-                                <td>
-                                    <button onClick={() => deleteItem(car._id)}>{del[lang]}</button>
-                                </td>
-                            ))}
-                        </tr>
-                    )}
+                        {lists.map(list => (
+                            <tr>
+                                <th>{list.text}</th>
+                                {compare.map(car => (
+                                    <td>{car[list.key]}</td>
+                                ))}
+                            </tr>
+                        ))}
+                        <br />
+                        {compare.length > 0 && (
+                            <tr>
+                                <th></th>
+                                {compare.map(car => (
+                                    <td>
+                                        <button onClick={() => deleteItem(car._id)}>{del[lang]}</button>
+                                    </td>
+                                ))}
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>

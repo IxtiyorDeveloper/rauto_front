@@ -25,7 +25,7 @@ function AddCardForm() {
     const [op1, setOp1] = useState("")
     const [op2, setOp2] = useState("")
     const is1024 = useMediaQuery({query: "(max-width: 1024px)"})
-    const {opisaniya, opisaniyaru, photo,success} = Language
+    const { opisaniya, opisaniyaru, photo, success, newCarAdd, back } = Language
 
     const handleFile = e => {
         setFile([...e.target.files])
@@ -96,7 +96,7 @@ function AddCardForm() {
                     <div className='page-title-box'>
                         <div className='row align-items-center'>
                             <div className='col-sm-6'>
-                                <h4>Yangi Avtomobil qo'shish</h4>
+                                <h4>{newCarAdd[lang]}</h4>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ function AddCardForm() {
                         <div className='col-12'>
                             <div className='card-avto'>
                                 <div className='card-avto-body'>
-                                    <h4 className='mt-0 header-title'>Yangi Avtomobil qo'shish</h4>
+                                    <h4 className='mt-0 header-title'>{newCarAdd[lang]}</h4>
                                     {
                                         data.filter(i => i.key !== "status").map((field, index) => {
                                                 return (
@@ -222,10 +222,11 @@ function AddCardForm() {
                                                 href='/admin/cards'
                                                 className='button_sumbit_news btn btn-dark btn-sm float-right ml-3'
                                             >
-                                                Orqaga
+                                                {back[lang]}
                                             </a>
                                             <input
                                                 type='submit'
+                                                placeholder='Yuborish'
                                                 className='button_sumbit_news btn btn-success btn-sm float-right ml-3'
                                             />
                                         </div>

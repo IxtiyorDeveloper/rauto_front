@@ -12,8 +12,8 @@ export const Language = {
     transmissionru: ["Коробка передач", "Transmissiya"],
     kuzuv: ["Kuzov turi", "Тип кузова"],
     kuzuvru: ["Тип кузова", "Kuzov turi"],
-    perevod: ["Privod", "Привод rus"],
-    perevodru: ["Privod ru", "Привод"],
+    perevod: ["perevod", "Привод rus"],
+    perevodru: ["perevod ru", "Привод"],
     yurgani: ["Yurgan masofasi", "Пробег"],
     narxi: ["Narxi sumda", "Стоимость авто (Сум)"],
     opisaniya: ["Mashina haqida batafsil:", "Подробнее о машине:"],
@@ -59,7 +59,7 @@ export const Language = {
     second: ["Avtomashinalarni", "Поможем"],
     sotishMain: ["sotishga ", " продать"],
     yoki: [" yoki ", " или "],
-    olishMain: [" sotib olishga ", "купить" ],
+    olishMain: [" sotib olishga ", "купить"],
     fourth: ["yordam beramiz!", "автомобиль по выгодной цене!"],
     five: ["KONSULTATSIYA", "КОНСУЛЬТАЦИЯ"],
     six: ["Bizning hozirgi mijozlarimiz soni", "Количества текущие клиенты"],
@@ -209,7 +209,7 @@ export const Language = {
 
     car1: ["Yoqilg'i:", "Топливо:"],
     car2: ["Transmissiya:", "Трансмиссия:"],
-    car3: ["Privod:", "Привод:"],
+    car3: ["Uzatma:", "Привод:"],
     car4: ["Yurgani:", "Пробег:"],
     car5: ["Batafsil", "Подробнее"],
     car6: ["Taqqoslashga qo'shish", "Добавить для сравнения"],
@@ -575,7 +575,7 @@ export const Language = {
 
     // Applications
     applications: ["Tushgan arizalar", "Полученные заявки"],
-    applications_details: ["Tushgan arizalar batafsil", "Полученные заявки"],
+    applications_details: ["Tushgan arizalar", "Полученные заявки"],
 
     // Poleznaya info
     polez1: ["Menda avtomatik uzatkich quti bor. Nima uchun qo'l tormozi kerak?", "У меня коробка-автомат. Зачем нужен ручник?"],
@@ -719,6 +719,7 @@ export const Language = {
     home: ["Asosiy sahifaga o'tish", "Перейти на главную страницу"],
     create: ["Yaratish", "Создать"],
     list: ["Ro'yxat", "Список"],
+    listCars: ["Avtomashinalar ro'yxati", "Список автомобилей"],
     name1: ["Nomi", "Имя"],
     phone: ["Telefon", "Телефон"],
     region: ["Viloyat", "Область"],
@@ -751,7 +752,7 @@ export const Language = {
     banks: ["Barcha Bank xodimlari", "Все сотрудники банка"],
     orders_all: ["Barcha Buyurtmalar", "Все заказы"],
     sure_status: ["Rostan ham status o'zgartirmoqchimisiz", "Вы уверены, что хотите изменить свой статус?"],
-    info_checking: ["Malumot tekshirilmoqda", "Информация проверяется"],
+    info_checking: ["Ma'lumot tekshirilmoqda", "Информация проверяется"],
     relative_number: ["Qarindosh raqami", "Номер родственника"],
     relative_number2: ["Qarindosh raqami 2", "Родственник номер 2"],
     house_number: ["Uy raqami", "номер дома"],
@@ -796,4 +797,5 @@ export const Language = {
     ag: ["Qaytadan yuborish", "Отправить еще раз"],
     didnt: ["SMS ni olmadingizmi?", "Вы не получили СМС?"],
     lgt: ["Chiqish", "Выйти"],
+    newCarAdd: ["Yangi Avtomobil qo'shish", "Добавить новую машину"],
 };

@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaBalanceScale } from "react-icons/fa";
+import transmission_img from '../../assets/icons/gear-shift.svg'
+import gear_img from '../../assets/icons/gear.svg'
 import '../style.css'
 
 import { Language } from '../../lang/Languages'
@@ -8,12 +11,7 @@ import { useSelector } from 'react-redux'
 const CardCar = ({ car, addCompare }) => {
     const { lang } = useSelector(state => state.lang)
 
-    const { car1 } = Language
-    const { car2 } = Language
-    const { car3 } = Language
-    const { car4 } = Language
-    const { car5 } = Language
-    const { car6 } = Language
+    const { car1, car2, car3, car4, car5, car6, Narxi } = Language
 
     return (
         <div className='cards__card card'>
@@ -21,26 +19,28 @@ const CardCar = ({ car, addCompare }) => {
                 <img src={car?.photo?.[0]} alt='img' />
             </div>
             <p className='card__title'>
-                {car?.marka} {car?.madel} {car?.yili}{' '}
+                <Link to={`/more/${car?._id}`} className='a'>
+                    {car?.marka} {car?.madel} {car?.yili}{' '}
+                </Link>
             </p>
             <div className="cf">
                 <div className='card__info'>
                     <div className='card__item'>
                         <span className='material-symbols-outlined'>local_gas_station</span>
                         <strong>{car1[lang]}</strong>
-                        {car?.yoqilgi}
+                        {lang === '0' ? car.yoqilgi : car.yoqilgiru}
                     </div>
                     <div className='card__item'>
-                        <span className='material-symbols-outlined'>settings</span>
+                        <img src={transmission_img} className="gear-img_card" alt='star' />
                         <strong> {car2[lang]}</strong>
-                        {car?.transmission}
+                        {lang === '0' ? car.transmission : car.transmissionru}
                     </div>
                 </div>
                 <div className='card__info'>
                     <div className='card__item'>
-                        <span className='material-symbols-outlined'>album</span>
+                        <img src={gear_img} className='gear-img_card' alt='star' />
                         <strong> {car3[lang]}</strong>
-                        {car?.perevod}
+                        {lang === '0' ? car.perevod : car.perevodru}
                     </div>
                     <div className='card__item'>
                         <span className='material-symbols-outlined'>speed</span>
@@ -51,17 +51,17 @@ const CardCar = ({ car, addCompare }) => {
             </div>
             <div className='card__line'></div>
             <div className='card__price'>
-                Цена: <strong>{Number(car?.narxi).toLocaleString().replace(/,/g, ' ')}</strong>{' '}
+                {Narxi[lang]}: <strong>{Number(car?.narxi).toLocaleString().replace(/,/g, ' ')}</strong>{' '}
                 <span>UZS</span>
             </div>
             <Link to={`/more/${car?._id}`} className='card__button'>
                 {car5[lang]}
             </Link>
             <div className='card__add'>
-                <button onClick={() => addCompare(car)}>
+                <button onClick={() => addCompare(car)} className='compare-btn'>
                     {car6[lang]}
-                    <button title='Сравнивать' className='material-symbols-outlined'>
-                        balance
+                    <button title='Сравнивать' className='compare-fa_icon'>
+                        <FaBalanceScale />
                     </button>
                 </button>
             </div>

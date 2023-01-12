@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminHeader from "../../components/admin_header/admin_header";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import {MainApi} from "../../api";
-import {useParams} from "react-router";
-import {Row, Col, Image} from "antd";
+import { MainApi } from "../../api";
+import { useParams } from "react-router";
+import { Row, Col, Image } from "antd";
 
 function SingleCar(props) {
-    const {id} = useParams()
+    const { id } = useParams()
     const [user, setUser] = useState([])
 
     const geUser = async () => {
@@ -23,7 +23,7 @@ function SingleCar(props) {
 
     return (
         <div className="d-flex">
-            <AdminHeader/>
+            <AdminHeader />
             <div className="row pt-5 page_list">
                 <div className="col-xl-12">
                     <div className="card-avto">
@@ -42,7 +42,7 @@ function SingleCar(props) {
                             </div>
                             <div
                                 className="btn btn-danger btn-sm float-right"
-                                // onClick={() => logout()}
+                            // onClick={() => logout()}
                             >
                                 Chiqish
                             </div>
@@ -55,48 +55,48 @@ function SingleCar(props) {
                             <h4 className="mt-0 mb-4">Avtomobil haqida batafsil malumot</h4>
                             <div className="mainWrapper">
                                 <div className="w30">
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Madel</Col>...<Col>{user?.madel}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Marka</Col>...<Col>{user?.marka}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Color</Col>...<Col>{user?.color}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Yili</Col>...<Col>{user?.yili}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Divigitel</Col>...<Col>{user?.divigitel}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Yoqilgi</Col>...<Col>{user?.yoqilgi}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Transmission</Col>...<Col>{user?.transmission}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Kuzuv</Col>...<Col>{user?.kuzuv}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
-                                        <Col>Perevod</Col>...<Col>{user?.perevod}</Col>
+                                    <Row gutter={[16, 16]}>
+                                        <Col>perevod</Col>...<Col>{user?.perevod}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Narxi</Col>...<Col>{user?.narxi}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Aksiya</Col>...<Col>{user?.aksiya}</Col>
                                     </Row>
-                                    <Row gutter={[16,16]}>
+                                    <Row gutter={[16, 16]}>
                                         <Col>Opisaniya</Col>...<Col>{user?.opisaniya}</Col>
                                     </Row>
                                 </div>
                                 <div className="w70">
-                                    <Row gutter={[20,20]}>
+                                    <Row gutter={[20, 20]}>
                                         {
-                                            user?.photo?.map((i,k) => {
-                                                return(
+                                            user?.photo?.map((i, k) => {
+                                                return (
                                                     <Col span={8}>
                                                         <Image
                                                             key={k}

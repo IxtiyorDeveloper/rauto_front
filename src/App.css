@@ -2490,6 +2490,10 @@ table.focus-on tbody tr.focused td {
     border-radius: 10px;
 }
 
+.form-group label{
+  color: #fff !important;
+}
+
 .card-pages {
     border-radius: 10px;
     background-color: rgb(0 119 204 / 55%);;

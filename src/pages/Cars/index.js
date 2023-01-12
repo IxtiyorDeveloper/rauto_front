@@ -55,29 +55,29 @@ const Car = ({addCompare}) => {
                                     {value: 'Matiz Best', name: 'Matiz Best'},
                                     {value: 'Nexia DOHS', name: 'Nexia DOHS'},
                                     {value: 'Nexia SOHS', name: 'Nexia SOHS'},
-                                    {value: 'Nexia-3 1-позиция', name: 'Nexia-3 1-позиция'},
-                                    {value: 'Nexia-3 2-позиция', name: 'Nexia-3 2-позиция'},
-                                    {value: 'Nexia-3 3-позиция', name: 'Nexia-3 3-позиция'},
-                                    {value: 'Nexia-3 4-позиция', name: 'Nexia-3 4-позиция'},
-                                    {value: 'Spark 1-позиция', name: 'Spark 1-позиция'},
-                                    {value: 'Spark 1-евро позиция', name: 'Spark 1-евро позиция'},
-                                    {value: 'Spark 2-позиция', name: 'Spark 2-позиция'},
-                                    {value: 'Spark 2-евро позиция', name: 'Spark 2-евро позиция'},
-                                    {value: 'Spark 3-позиция', name: 'Spark 3-позиция'},
-                                    {value: 'Spark 3-евро позиция', name: 'Spark 3-евро позиция'},
-                                    {value: 'Spark 4-позиция', name: 'Spark 4-позиция'},
-                                    {value: 'Spark 4-евро позиция', name: 'Spark 4-евро позиция'},
-                                    {value: 'Cobalt 1-позиция', name: 'Cobalt 1-позиция'},
-                                    {value: 'Cobalt 2-позиция', name: 'Cobalt 2-позиция'},
+                                    {value: 'Nexia-3 1-поз/pozit', name: 'Nexia-3 1-поз/pozit'},
+                                    {value: 'Nexia-3 2-поз/pozit', name: 'Nexia-3 2-поз/pozit'},
+                                    {value: 'Nexia-3 3-поз/pozit', name: 'Nexia-3 3-поз/pozit'},
+                                    {value: 'Nexia-3 4-поз/pozit', name: 'Nexia-3 4-поз/pozit'},
+                                    {value: 'Spark 1-поз/pozit', name: 'Spark 1-поз/pozit'},
+                                    {value: 'Spark 1-евро поз/pozit', name: 'Spark 1-евро поз/pozit'},
+                                    {value: 'Spark 2-поз/pozit', name: 'Spark 2-поз/pozit'},
+                                    {value: 'Spark 2-евро поз/pozit', name: 'Spark 2-евро поз/pozit'},
+                                    {value: 'Spark 3-поз/pozit', name: 'Spark 3-поз/pozit'},
+                                    {value: 'Spark 3-евро поз/pozit', name: 'Spark 3-евро поз/pozit'},
+                                    {value: 'Spark 4-поз/pozit', name: 'Spark 4-поз/pozit'},
+                                    {value: 'Spark 4-евро поз/pozit', name: 'Spark 4-евро поз/pozit'},
+                                    {value: 'Cobalt 1-поз/pozit', name: 'Cobalt 1-поз/pozit'},
+                                    {value: 'Cobalt 2-поз/pozit', name: 'Cobalt 2-поз/pozit'},
                                     {
-                                        value: 'Cobalt 2-евро позиция',
-                                        name: 'Cobalt 2-евро позиция',
+                                        value: 'Cobalt 2-евро поз/pozit',
+                                        name: 'Cobalt 2-евро поз/pozit',
                                     },
-                                    {value: 'Cobalt 3-позиция', name: 'Cobalt 3-позиция'},
-                                    {value: 'Cobalt 4-позиция', name: 'Cobalt 4-позиция'},
+                                    {value: 'Cobalt 3-поз/pozit', name: 'Cobalt 3-поз/pozit'},
+                                    {value: 'Cobalt 4-поз/pozit', name: 'Cobalt 4-поз/pozit'},
                                     {
-                                        value: 'Cobalt 4-евро позиция',
-                                        name: 'Cobalt 4-евро позиция',
+                                        value: 'Cobalt 4-евро поз/pozit',
+                                        name: 'Cobalt 4-евро поз/pozit',
                                     },
                                     {
                                         value: 'Lacetti 1-п L-COMFORT PLUS',
@@ -89,12 +89,12 @@ const Car = ({addCompare}) => {
                                     },
                                     {value: 'Lacetti L-Style MT', name: 'Lacetti L-Style MT'},
                                     {value: 'Lacetti L-Style AT', name: 'Lacetti L-Style AT'},
-                                    {value: 'Malibu-1 1-позиция', name: 'Malibu-1 1-позиция'},
-                                    {value: 'Malibu-1 2-позиция', name: 'Malibu-1 2-позиция'},
-                                    {value: 'Malibu-1 3-позиция', name: 'Malibu-1 3-позиция'},
+                                    {value: 'Malibu-1 1-поз/pozit', name: 'Malibu-1 1-поз/pozit'},
+                                    {value: 'Malibu-1 2-поз/pozit', name: 'Malibu-1 2-поз/pozit'},
+                                    {value: 'Malibu-1 3-поз/pozit', name: 'Malibu-1 3-поз/pozit'},
                                     {value: 'Malibu-2 2.0L LTZ', name: 'Malibu-2 2.0L LTZ'},
-                                    {value: 'Malibu-2 2-позиция', name: 'Malibu-2 2-позиция'},
-                                    {value: 'Malibu-2 3-позиция', name: 'Malibu-2 3-позиция'},
+                                    {value: 'Malibu-2 2-поз/pozit', name: 'Malibu-2 2-поз/pozit'},
+                                    {value: 'Malibu-2 3-поз/pozit', name: 'Malibu-2 3-поз/pozit'},
                                     {
                                         value: 'Tracker-2 1.0T LT AT FWD',
                                         name: 'Tracker-2 1.0T LT AT FWD',
@@ -222,8 +222,8 @@ const Car = ({addCompare}) => {
                             >
                                 <Row>
                                     {[
-                                        {value: 'mexanika', name: ma[lang]},
-                                        {value: 'avtomat', name: av[lang]},
+                                        {value: 'Mexanika', name: ma[lang]},
+                                        {value: 'Avtomat', name: av[lang]},
                                     ].map(item => (
                                         <Col span={12} key={item.name}>
                                             <Checkbox value={item.value}>{item.name}</Checkbox>
@@ -235,7 +235,7 @@ const Car = ({addCompare}) => {
                         {/* Price */}
                         <Collapse.Panel header={narxi[lang]} key={7}>
                             <Slider
-                                min={0}
+                                min={10000000}
                                 max={10000000000}
                                 defaultValue={price}
                                 onChange={value => setPrice(value)}

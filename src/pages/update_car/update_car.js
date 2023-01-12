@@ -1,27 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import {Button, Form, Image, Input, Row, Select} from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Button, Form, Image, Input, Row, Select } from 'antd';
 import "./update_car.css"
 import AdminHeader from "../../components/admin_header/admin_header";
 import axios from "axios";
-import {MainApi} from "../../api";
-import {toast} from "react-toastify";
-import {useParams} from "react-router";
-import {fields} from "../../components/add_card_form/fields";
-import {useSelector} from "react-redux";
-import {Language} from "../../lang/Languages";
+import { MainApi } from "../../api";
+import { toast } from "react-toastify";
+import { useParams } from "react-router";
+import { fields } from "../../components/add_card_form/fields";
+import { useSelector } from "react-redux";
+import { Language } from "../../lang/Languages";
 
 function UpdateCar() {
-    const {id} = useParams()
+    const { id } = useParams()
     const { TextArea } = Input;
     const [form] = Form.useForm()
-    const {Option} = Select
+    const { Option } = Select
     const [op1, setOp1] = useState("")
     const [op2, setOp2] = useState("")
     const [data, setData] = useState({})
     const [imgs, setImgs] = useState([])
     const [imgs1, setImgs1] = useState([])
 
-    const {lang} = useSelector(state => state.lang)
+    const { lang } = useSelector(state => state.lang)
     const {
         model,
         marka1,
@@ -87,7 +87,7 @@ function UpdateCar() {
 
     return (
         <div className="contain pb50">
-            <AdminHeader/>
+            <AdminHeader />
             <div className="fields">
                 <Form
                     form={form}
@@ -300,7 +300,7 @@ function UpdateCar() {
                             },
                         ]}
                     >
-                        <Input/>
+                        <Input />
                     </Form.Item>
 
                     <Form.Item
@@ -485,7 +485,7 @@ function UpdateCar() {
                             },
                         ]}
                     >
-                        <Input/>
+                        <Input />
                     </Form.Item>
 
                     <Form.Item
@@ -498,7 +498,7 @@ function UpdateCar() {
                             },
                         ]}
                     >
-                        <Input/>
+                        <Input />
                     </Form.Item>
 
                     <Form.Item
@@ -532,7 +532,7 @@ function UpdateCar() {
                             },
                         ]}
                     >
-                    <TextArea rows={4}/>
+                        <TextArea rows={4} />
                     </Form.Item>
                     <div className=" m-b-20">
                         <Form.Item
@@ -545,7 +545,7 @@ function UpdateCar() {
                                 },
                             ]}
                         >
-                           <TextArea rows={4}/>
+                            <TextArea rows={4} />
                         </Form.Item>
                     </div>
 
@@ -574,7 +574,7 @@ function UpdateCar() {
                             offset: 8,
                             span: 16,
                         }}
-                        style={{marginTop: "30px"}}
+                        style={{ marginTop: "30px" }}
                     >
                         <Button type="primary" htmlType="submit">
                             {save[lang]}
@@ -582,8 +582,8 @@ function UpdateCar() {
                     </Form.Item>
                 </Form>
 
-                <div style={{marginLeft: "260px"}}>
-                    <Input type="file" multiple onChange={e => handleNavigate(e)}/>
+                <div style={{ marginLeft: "260px" }}>
+                    <Input type="file" multiple onChange={e => handleNavigate(e)} />
                     <Row gutter={[20, 20]}>
                         {
                             imgs1?.length ?

@@ -140,7 +140,7 @@ function Contact(props) {
                         <Form.Item
                             label={mail[lang]}
                             name="email"
-                            rules={[{ required: true, message: req[lang] }]}
+                            rules={[{ required: false, message: req[lang] }]}
                         >
                             <Input className="inp" type="email" placeholder={mailA[lang]} />
                         </Form.Item>

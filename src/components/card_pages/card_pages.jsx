@@ -17,7 +17,7 @@ function AdminCards() {
     const [cars, setCars] = useState([])
     const [type, setType] = useState("")
     const {lang} = useSelector(state => state.lang)
-    const {deleteOrd, create, list, home, search,lgt} = Language;
+    const {deleteOrd, create, listCars, home, search} = Language;
 
     useEffect(() => {
         if (!!localStorage.getItem("user_token")) {
@@ -109,7 +109,7 @@ function AdminCards() {
                         >
                             {create[lang]}
                         </Link>
-                        <h4 className="mt-0 mb-4">{list[lang]}</h4>
+                        <h4 className="mt-0 mb-4">{listCars[lang]}</h4>
                         {
                             type === "user" ?
                                 <Cars

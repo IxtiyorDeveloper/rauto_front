@@ -1,13 +1,13 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import {Button, Checkbox, Modal, Table} from "antd";
-import {useNavigate} from "react-router";
-import {ExclamationCircleOutlined} from "@ant-design/icons";
+import React, { useEffect, useMemo, useState } from 'react';
+import { Button, Checkbox, Modal, Table } from "antd";
+import { useNavigate } from "react-router";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
-import {MainApi} from "../../api";
-import {useSelector} from "react-redux";
-import {Language} from "../../lang/Languages";
+import { MainApi } from "../../api";
+import { useSelector } from "react-redux";
+import { Language } from "../../lang/Languages";
 
-function Cars({dataSource, deleteCar, getCars}) {
+function Cars({ dataSource, deleteCar, getCars }) {
 
     const navigate = useNavigate()
 
@@ -17,7 +17,7 @@ function Cars({dataSource, deleteCar, getCars}) {
 
     const [type, setType] = useState(null)
 
-    const {lang} = useSelector(state => state.lang)
+    const { lang } = useSelector(state => state.lang)
     const {
         model,
         marka1,
@@ -64,7 +64,7 @@ function Cars({dataSource, deleteCar, getCars}) {
             Modal.confirm({
                 centered: true,
                 title: "Rostan ham status o'zgartirmoqchimisiz",
-                icon: <ExclamationCircleOutlined/>,
+                icon: <ExclamationCircleOutlined />,
                 onOk() {
                     axios
                         .put(`${MainApi}/car/a/${id}`)
@@ -169,7 +169,7 @@ function Cars({dataSource, deleteCar, getCars}) {
                 dataIndex: 'opisaniya',
                 key: 'opisaniya',
                 render: function (html) {
-                    return <div dangerouslySetInnerHTML={{__html: html}}/>
+                    return <div dangerouslySetInnerHTML={{ __html: html }} />
                 }
             },
             {
@@ -177,7 +177,7 @@ function Cars({dataSource, deleteCar, getCars}) {
                 dataIndex: 'opisaniyaru',
                 key: 'opisaniyaru',
                 render: function (html) {
-                    return <div dangerouslySetInnerHTML={{__html: html}}/>
+                    return <div dangerouslySetInnerHTML={{ __html: html }} />
                 }
             },
             {
@@ -207,7 +207,7 @@ function Cars({dataSource, deleteCar, getCars}) {
                 key: '_id',
                 render: (props) => {
                     return (
-                        <Button type="primary" onClick={() => handleClick(props)}>Batafsil</Button>
+                        <Button type="primary" onClick={() => handleClick(props)}>{Batafsil[lang]}</Button>
                     )
                 }
             },
@@ -229,7 +229,7 @@ function Cars({dataSource, deleteCar, getCars}) {
             <Table
                 dataSource={dataSource}
                 columns={columns}
-                scroll={{x: "max-content"}}
+                scroll={{ x: "max-content" }}
             />
         </div>
     );

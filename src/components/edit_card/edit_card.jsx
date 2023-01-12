@@ -12,7 +12,7 @@ function EditCardForm() {
     const fuel_id = useRef()
     const transmissiya_id = useRef()
     const kuzov_id = useRef()
-    const privod_id = useRef()
+    const perevod_id = useRef()
     const probeg_id = useRef()
     const page_main_id = useRef()
     const page_title_uz = useRef()
@@ -207,7 +207,7 @@ function EditCardForm() {
                                         <div className="form-group row">
                                             <label for="example-text-input" className="col-sm-2 col-form-label">Привод</label>
                                             <div className="col-sm-5" >
-                                                <select name="subCategoryId menu_id" className="main_selector form-control" ref={privod_id}>
+                                                <select name="subCategoryId menu_id" className="main_selector form-control" ref={perevod_id}>
                                                     <option value="0">=Kerak emas=</option>
                                                     <option value="1">Передный</option>
                                                     <option value="1">Задный</option>

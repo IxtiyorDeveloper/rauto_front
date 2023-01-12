@@ -12,7 +12,7 @@ function Banks({dataSource, getBanks, deleteApplication}) {
     const {lang} = useSelector(state => state.lang)
     const {
         sure_status,
-        info_checking,
+        // info_checking,
         ph,
         name,
         sername,
