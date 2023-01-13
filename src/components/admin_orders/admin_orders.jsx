@@ -1,13 +1,13 @@
 import axios from 'axios'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import Orders from "../orders/orders";
-import {MainApi} from "../../api";
-import {Button, Modal} from "antd";
-import {ExclamationCircleOutlined} from "@ant-design/icons";
-import {useNavigate} from "react-router";
-import lang from "../../lang/lang";
-import {useSelector} from "react-redux";
-import {Language} from "../../lang/Languages";
+import { MainApi } from "../../api";
+import { Button, Modal } from "antd";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router";
+// import lang from "../../lang/lang";
+import { useSelector } from "react-redux";
+import { Language } from "../../lang/Languages";
 import LogoutComponent from "../logoutComponent/logoutComponent";
 
 function AdminOrders() {
@@ -28,7 +28,7 @@ function AdminOrders() {
         Modal.confirm({
             centered: true,
             title: deleteOrd[lang],
-            icon: <ExclamationCircleOutlined/>,
+            icon: <ExclamationCircleOutlined />,
             onOk() {
                 axios
                     .delete(`${MainApi}/order/${id}`)
@@ -46,13 +46,13 @@ function AdminOrders() {
         getOrders()
     }, [])
 
-    const {lang} = useSelector(state => state.lang)
-    const {search,home,create,list,deleteOrd} = Language;
+    const { lang } = useSelector(state => state.lang)
+    const { search, home, list, deleteOrd } = Language;
 
     return (
         <div className='ml-5 admin_news_section'>
             <div className='row pt-5'>
-                <LogoutComponent/>
+                <LogoutComponent />
                 <div className='col-12'>
                     <div className='box content_wrapper'>
                         <form name='search' className='search_form'>
@@ -76,7 +76,7 @@ function AdminOrders() {
                     </div>
                     <h4 className='mt-0 mb-4'>{list[lang]}</h4>
                     <div className='table-responsive'>
-                        <Orders dataSource={orders} deleteOrder={deleteOrder}/>
+                        <Orders dataSource={orders} deleteOrder={deleteOrder} />
                     </div>
                 </div>
             </div>
