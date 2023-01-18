@@ -1,1 +1,1 @@
-export const MainApi = "http:localhost:5000"
+export const MainApi = "https://dev-rauto.uz"
