@@ -13,7 +13,7 @@ function CardsCar() {
 
     const getCars = async () => {
         await axios
-            .get('http://185.196.214.145:5000/car/user/all')
+            .get('https://dev-rauto.uz/car/user/all')
             .then(res => setCars(res.data))
             .catch(err => new Error(err))
     }

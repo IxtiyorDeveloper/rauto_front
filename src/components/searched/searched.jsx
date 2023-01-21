@@ -8,7 +8,7 @@ function SearchedPage() {
     const { question } = useParams()
     const [page, setPage] = useState([])
     useEffect(() => {
-        axios.get(`http://185.196.214.145:5000/sub_categories/find/${question}`)
+        axios.get(`https://dev-rauto.uz/sub_categories/find/${question}`)
             .then((response) => {
                 return response.json();
             })

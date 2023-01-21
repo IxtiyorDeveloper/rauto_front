@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const MainApi = "http://185.196.214.145:5000"
+export const MainApi = "https://dev-rauto.uz"
 
 const instance = axios.create({
     baseURL: MainApi,

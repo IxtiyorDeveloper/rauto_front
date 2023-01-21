@@ -9,7 +9,7 @@ function EditClientsForm() {
     const { id } = useParams()
     const [news, setNews] = useState([])
     useEffect(() => {
-        axios.get(`http://185.196.214.145:5000/${id}`)
+        axios.get(`https://dev-rauto.uz/${id}`)
             .then((response) => {
                 return response.json();
             })
@@ -31,7 +31,7 @@ function EditClientsForm() {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-avto-body">
-                                <h4 className="mb-2 header-title">Yangilik ni Tahrirlash</h4>
+                                <h4 className="mb-2 header-title">Tahrirlash</h4>
                                 {news.map(item => (
                                     <form autocomplete="off" >
                                         <div className="form-group row">

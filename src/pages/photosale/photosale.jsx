@@ -26,7 +26,7 @@ function PhotoSale() {
 
     const order = async () => {
         await axios
-            .post('http://185.196.214.145:5000/order/add', data)
+            .post('https://dev-rauto.uz/order/add', data)
             .then(res => console.log(res))
             .catch(err => new Error(err))
     }
